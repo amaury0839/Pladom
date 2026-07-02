@@ -1,47 +1,66 @@
 # PLADOM — Sitio web (HTML estático)
 
-Landing de Servicios PLADOM SRL. Un solo archivo (`index.html`) + carpeta `assets/` con el logo. Listo para GitHub Pages.
+Landing de Servicios PLADOM SRL. Sitio estático de un solo archivo (`public/index.html`)
+más la carpeta `public/assets/` con el logo y el favicon. Listo para desplegar en
+**Cloudflare Pages**.
 
 ## Estructura
+
 ```
-pladom-web/
-├── index.html          ← la página
-├── assets/             ← logo y favicon
-│   ├── pladom-logo.png
-│   ├── pladom-logo-white.png
-│   └── favicon.png
+pladom/
+├── public/                 ← carpeta que se publica (build output)
+│   ├── index.html          ← la página
+│   ├── _headers            ← cabeceras de seguridad y caché (Cloudflare)
+│   └── assets/             ← logo y favicon
+│       ├── pladom-logo.png
+│       ├── pladom-logo-white.png
+│       └── favicon.png
+├── wrangler.toml           ← configuración de Cloudflare Pages
+├── .gitignore
 └── README.md
 ```
 
-## Desplegar en GitHub Pages (paso a paso)
+No hay paso de build: Cloudflare sirve directamente el contenido de `public/`.
 
-1. Crea un repositorio nuevo en https://github.com/new (ej. `pladom-web`), público.
-2. Sube **el contenido** de esta carpeta (que `index.html` quede en la raíz del repo, no dentro de otra carpeta). Puedes arrastrar los archivos en "Add file → Upload files".
-3. En el repo: **Settings → Pages**.
-4. En "Source" elige **Deploy from a branch**, rama `main`, carpeta `/ (root)`. Guarda.
-5. Espera 1–2 minutos. Tu sitio quedará en `https://TU-USUARIO.github.io/pladom-web/`.
+## Desplegar en Cloudflare Pages
 
-### Alternativa por terminal (si tienes git instalado)
+### Opción A — Conectando el repositorio de GitHub (recomendada)
+
+1. Entra en el [panel de Cloudflare](https://dash.cloudflare.com/) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+2. Autoriza y elige este repositorio.
+3. Configura el build así:
+   - **Framework preset:** `None`
+   - **Build command:** *(déjalo vacío)*
+   - **Build output directory:** `public`
+4. Pulsa **Save and Deploy**. En ~1 minuto tendrás una URL `https://pladom-web.pages.dev`.
+5. Cada `git push` a la rama de producción vuelve a desplegar automáticamente.
+
+### Opción B — Desde la terminal con Wrangler
+
 ```bash
-cd pladom-web
-git init
-git add .
-git commit -m "PLADOM landing"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/pladom-web.git
-git push -u origin main
-# luego activa Pages en Settings → Pages
+# 1. Instala Wrangler (solo la primera vez)
+npm install -g wrangler
+
+# 2. Inicia sesión en Cloudflare
+wrangler login
+
+# 3. Despliega (usa public/ definido en wrangler.toml)
+wrangler pages deploy
 ```
 
-## Conectar tu dominio pladom.com.do (opcional, después)
-1. En **Settings → Pages → Custom domain** escribe `www.pladom.com.do` y guarda (esto crea un archivo `CNAME` en el repo).
-2. En tu proveedor de DNS agrega un registro **CNAME**: `www` → `TU-USUARIO.github.io`.
-3. Para el dominio raíz (`pladom.com.do`) agrega los registros **A** de GitHub Pages:
-   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
-4. Marca **Enforce HTTPS** cuando GitHub lo permita.
-> Ojo: apuntar el dominio a GitHub lo desconecta de Wix. Hazlo solo cuando estés seguro.
+## Conectar tu dominio pladom.com.do
+
+1. En el proyecto de Pages: **Custom domains** → **Set up a domain** → escribe `pladom.com.do`
+   (y repite para `www.pladom.com.do`).
+2. Si el dominio ya está en Cloudflare, los registros DNS se crean solos.
+   Si no, mueve el DNS del dominio a Cloudflare o crea un **CNAME** apuntando a
+   `pladom-web.pages.dev`.
+3. Cloudflare gestiona el certificado HTTPS automáticamente.
+
+> Ojo: apuntar el dominio a Cloudflare lo desconecta de Wix. Hazlo solo cuando estés seguro.
 
 ## Pendientes antes de publicar en serio
+
 - Reemplazar las fotos de stock (hero y "Nosotros" usan imágenes de Unsplash) por fotos reales de tu equipo.
 - Confirmar el modelo del 32' (Genie 3246 vs 3232).
 - Agregar precios/tarifas si quieres filtrar curiosos.
