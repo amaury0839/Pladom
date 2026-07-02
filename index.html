@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLADOM | Renta de plataformas tipo tijera y contenedores en República Dominicana</title>
+<meta name="description" content="Servicios PLADOM: renta de plataformas elevadoras tipo tijera (19', 26', 32', 40') y contenedores marítimos 40' HC en todo República Dominicana. Equipos modernos con mantenimiento preventivo.">
+<meta name="theme-color" content="#2C2D2D">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Servicios PLADOM">
+<meta property="og:title" content="PLADOM | Soluciones de altura, transporte y almacenaje">
+<meta property="og:description" content="Renta de plataformas tipo tijera y contenedores marítimos en todo República Dominicana.">
+<meta property="og:url" content="https://www.pladom.com.do">
+<meta property="og:image" content="assets/pladom-logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- Schema.org LocalBusiness para SEO local -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Servicios PLADOM SRL",
+  "image": "https://www.pladom.com.do/assets/pladom-logo.png",
+  "description": "Renta de plataformas elevadoras tipo tijera y contenedores marítimos en República Dominicana.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cerros de Palmarejo, Pantoja",
+    "addressCountry": "DO"
+  },
+  "telephone": "+18292725791",
+  "url": "https://www.pladom.com.do",
+  "areaServed": "República Dominicana",
+  "sameAs": [
+    "https://www.instagram.com/serviciospladom/",
+    "https://www.tiktok.com/@serviciospladom"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --gray:#848484;
+    --gray-light:#A1AFB0;
+    --dark:#2C2D2D;
+    --dark-2:#4F5151;
+    --orange:#FFAC67;
+    --orange-dk:#F5921E;
+    --bg:#F7F8F8;
+    --white:#FFFFFF;
+    --line:#E4E7E7;
+    --shadow:0 10px 30px rgba(44,45,45,.08);
+    --shadow-lg:0 20px 50px rgba(44,45,45,.14);
+    --radius:14px;
+    --wa:#25D366;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Roboto',sans-serif;color:var(--dark);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Teko',sans-serif;font-weight:600;line-height:1.05;letter-spacing:.5px;text-transform:uppercase;color:var(--dark)}
+  h2{font-size:clamp(2.2rem,4.5vw,3.4rem)}
+  h3{font-size:1.6rem}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:min(1180px,92%);margin-inline:auto}
+  section{padding:clamp(56px,8vw,110px) 0}
+  .eyebrow{font-family:'Roboto';font-weight:700;text-transform:uppercase;letter-spacing:3px;font-size:.78rem;color:var(--orange-dk)}
+  .lead{font-size:1.08rem;color:var(--dark-2);max-width:60ch}
+  .center{text-align:center;margin-inline:auto}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:50px;font-weight:700;font-size:.95rem;transition:.2s;cursor:pointer;border:none}
+  .btn-primary{background:var(--orange);color:var(--dark)}
+  .btn-primary:hover{background:var(--orange-dk);color:#fff;transform:translateY(-2px)}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{filter:brightness(.93);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.6);color:#fff}
+  .btn-ghost:hover{background:#fff;color:var(--dark)}
+  .btn-dark{background:var(--dark);color:#fff}
+  .btn-dark:hover{background:var(--dark-2);transform:translateY(-2px)}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .nav .logo img{height:46px;width:auto}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-weight:500;font-size:.95rem;color:var(--dark-2);transition:.2s}
+  .nav-links a:hover{color:var(--orange-dk)}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+  .burger span{width:26px;height:3px;background:var(--dark);border-radius:3px;transition:.3s}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;overflow:hidden;padding:clamp(80px,12vw,150px) 0;
+    background:linear-gradient(120deg,rgba(44,45,45,.94),rgba(79,81,81,.82)),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80') center/cover}
+  .hero .eyebrow{color:var(--orange)}
+  .hero h1{color:#fff;font-size:clamp(3rem,7vw,5.4rem);margin:12px 0 18px;max-width:16ch}
+  .hero p{font-size:1.2rem;max-width:52ch;color:#EDEFEF;margin-bottom:34px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* Stats bar */
+  .stats{background:var(--orange);color:var(--dark)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:34px 0}
+  .stat{text-align:center}
+  .stat b{font-family:'Teko';font-size:2.6rem;display:block;line-height:1}
+  .stat span{font-weight:500;font-size:.9rem}
+  .stat.divider{border-left:1px solid rgba(44,45,45,.18)}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .about-img{border-radius:var(--radius);box-shadow:var(--shadow-lg);aspect-ratio:4/3;object-fit:cover;width:100%}
+  .feature-list{list-style:none;margin-top:22px;display:grid;gap:14px}
+  .feature-list li{display:flex;gap:12px;align-items:flex-start;font-size:1rem}
+  .feature-list .ic{flex:0 0 26px;height:26px;border-radius:7px;background:var(--orange);color:var(--dark);display:grid;place-items:center;font-weight:700;font-size:.9rem}
+
+  /* Services */
+  #servicios{background:var(--bg)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
+  .card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.25s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+  .card-img{aspect-ratio:16/11;background:linear-gradient(135deg,#EDEFEF,#D3E7E9);position:relative;overflow:hidden}
+  .card-img img{width:100%;height:100%;object-fit:cover}
+  .card-img .tag{position:absolute;top:12px;left:12px;background:var(--dark);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:1px;padding:6px 12px;border-radius:50px;text-transform:uppercase}
+  .card-body{padding:22px 22px 26px;display:flex;flex-direction:column;flex:1}
+  .card-body h3{margin-bottom:2px}
+  .model{font-family:'Roboto';font-weight:700;font-size:.78rem;letter-spacing:.5px;color:var(--orange-dk);text-transform:uppercase;margin-bottom:4px}
+  .specs{list-style:none;margin:14px 0 20px;display:grid;gap:8px;font-size:.9rem;color:var(--dark-2)}
+  .specs li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:6px}
+  .specs li b{color:var(--dark);font-weight:500}
+  .card .btn{margin-top:auto;justify-content:center}
+
+  /* Testimonials */
+  #testimonios{background:var(--dark);color:#fff}
+  #testimonios h2,#testimonios .center h2{color:#fff}
+  .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+  .t-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:30px}
+  .t-stars{color:var(--orange);font-size:1.1rem;letter-spacing:2px;margin-bottom:14px}
+  .t-card p{color:#EDEFEF;font-size:1rem;font-style:italic}
+  .t-who{display:flex;align-items:center;gap:12px;margin-top:20px}
+  .t-avatar{width:44px;height:44px;border-radius:50%;background:var(--orange);color:var(--dark);display:grid;place-items:center;font-family:'Teko';font-size:1.4rem;font-weight:700}
+  .t-who b{display:block;font-family:'Roboto';font-weight:700;font-size:.95rem}
+  .t-who span{font-size:.82rem;color:var(--gray-light)}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:44px}
+  .contact-info{display:grid;gap:24px}
+  .ci{display:flex;gap:16px;align-items:flex-start}
+  .ci .ic{flex:0 0 46px;height:46px;border-radius:12px;background:var(--orange);display:grid;place-items:center;font-size:1.3rem}
+  .ci h4{font-family:'Roboto';font-weight:700;text-transform:none;font-size:1.02rem;letter-spacing:0;margin-bottom:2px}
+  .ci a,.ci p{color:var(--dark-2);font-size:.95rem}
+  .ci a:hover{color:var(--orange-dk)}
+  form{background:var(--bg);border-radius:var(--radius);padding:32px;display:grid;gap:16px}
+  form label{font-size:.85rem;font-weight:500;color:var(--dark-2);display:block;margin-bottom:5px}
+  form input,form select,form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:9px;font-family:inherit;font-size:.95rem;background:#fff;color:var(--dark)}
+  form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,172,103,.25)}
+  form textarea{resize:vertical;min-height:100px}
+  .form-note{font-size:.8rem;color:var(--gray);margin-top:2px}
+
+  /* Footer */
+  footer{background:var(--dark);color:#C9CCCC;padding:56px 0 26px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:38px}
+  footer img.flogo{height:54px;margin-bottom:16px}
+  footer h4{color:#fff;font-family:'Roboto';font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.85rem;margin-bottom:16px}
+  footer ul{list-style:none;display:grid;gap:9px;font-size:.92rem}
+  footer a:hover{color:var(--orange)}
+  .socials{display:flex;gap:12px;margin-top:8px}
+  .socials a{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:.2s}
+  .socials a:hover{background:var(--orange)}
+  .socials svg{width:20px;height:20px;fill:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem;color:var(--gray)}
+
+  /* Floating WhatsApp */
+  .fab{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.5);z-index:200;transition:.2s}
+  .fab:hover{transform:scale(1.08)}
+  .fab svg{width:32px;height:32px;fill:#fff}
+
+  /* Responsive */
+  @media(max-width:920px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
+    .cards,.t-grid{grid-template-columns:repeat(2,1fr)}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .stats .wrap{grid-template-columns:repeat(2,1fr);gap:26px}
+    .stat.divider{border-left:none}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;inset:74px 0 auto 0;background:#fff;flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:.3s;box-shadow:var(--shadow)}
+    .nav-links.open{transform:translateY(0)}
+    .nav-links a{padding:14px 22px;width:100%}
+    .nav .desktop-cta{display:none}
+    .burger{display:flex}
+    .cards,.t-grid,.foot-grid{grid-template-columns:1fr}
+    .hero-btns{flex-direction:column;align-items:stretch}
+    .hero-btns .btn{justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="wrap nav">
+    <a href="#inicio" class="logo"><img src="assets/pladom-logo.png" alt="PLADOM — Soluciones de altura"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://wa.me/18292725791?text=Hola%20PLADOM,%20quisiera%20una%20cotización." class="btn btn-wa desktop-cta" target="_blank" rel="noopener">Cotizar</a>
+      <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <p class="eyebrow">Servicios PLADOM · República Dominicana</p>
+    <h1>Soluciones de altura para tu proyecto</h1>
+    <p>Renta de plataformas elevadoras tipo tijera y contenedores marítimos. Equipos modernos, mantenimiento preventivo y respuesta ágil en toda la isla.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/18292725791?text=Hola%20PLADOM,%20quisiera%20una%20cotización." class="btn btn-primary" target="_blank" rel="noopener">Solicita tu cotización →</a>
+      <a href="#servicios" class="btn btn-ghost">Ver equipos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>+40'</b><span>Altura de trabajo disponible</span></div>
+    <div class="stat divider"><b>24/7</b><span>Atención por WhatsApp</span></div>
+    <div class="stat divider"><b>100%</b><span>Cobertura nacional</span></div>
+    <div class="stat divider"><b>0</b><span>Fallas por mantenimiento preventivo</span></div>
+  </div>
+</div>
+
+<!-- ============ NOSOTROS ============ -->
+<section id="nosotros">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow">Acerca de nosotros</p>
+      <h2>Tus aliados en trabajos en altura</h2>
+      <p class="lead">Somos una empresa dominicana dedicada principalmente a la renta de equipos para trabajos en altura. Nos enfocamos en brindar un alto nivel de servicio, precios competitivos y procesos ágiles al momento de la renta, para optimizar los recursos de tu proyecto.</p>
+      <ul class="feature-list">
+        <li><span class="ic">✓</span><div><b>Equipos modernos y certificados</b> — inventario de alta calidad listo para obra.</div></li>
+        <li><span class="ic">✓</span><div><b>Mantenimiento preventivo</b> — garantizamos seguridad y rendimiento en cada renta.</div></li>
+        <li><span class="ic">✓</span><div><b>Servicio nacional</b> — llevamos el equipo a tu proyecto en cualquier punto del país.</div></li>
+        <li><span class="ic">✓</span><div><b>Cotización ágil</b> — respuesta rápida por WhatsApp o correo.</div></li>
+      </ul>
+    </div>
+    <div>
+      <!-- REEMPLAZAR con foto real de tu equipo o equipo en obra -->
+      <img class="about-img" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80" alt="Equipo de trabajo en obra">
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="center" style="max-width:56ch">
+      <p class="eyebrow">Nuestros servicios</p>
+      <h2>Equipos disponibles para renta</h2>
+      <p class="lead center">Desde plataformas tipo tijera para trabajos en altura hasta contenedores marítimos para almacenamiento en obra. Todo con inventario propio y mantenimiento al día.</p>
+    </div>
+
+    <div class="cards">
+      <!-- 19' -->
+      <article class="card">
+        <div class="card-img"><span class="tag">Plataforma tijera</span></div>
+        <div class="card-body">
+          <h3>Tijera 19'</h3>
+          <p class="model">JLG 1930 Scissor Lift</p>
+          <ul class="specs">
+            <li>Altura máx. <b>19'</b></li>
+            <li>Altura de trabajo <b>25'</b></li>
+            <li>Ancho <b>30"</b></li>
+            <li>Capacidad de carga <b>500 lbs</b></li>
+          </ul>
+          <a href="https://wa.me/18292725791?text=Hola%20PLADOM,%20me%20interesa%20la%20plataforma%20tipo%20tijera%2019'." class="btn btn-dark" target="_blank" rel="noopener">Cotizar 19'</a>
+        </div>
+      </article>
+      <!-- 26' -->
+      <article class="card">
+        <div class="card-img"><span class="tag">Plataforma tijera</span></div>
+        <div class="card-body">
+          <h3>Tijera 26'</h3>
+          <p class="model">Genie 2646 / Skyjack 3226</p>
+          <ul class="specs">
+            <li>Altura máx. <b>26'</b></li>
+            <li>Altura de trabajo <b>32'</b></li>
+            <li>Ancho <b>32" – 46"</b></li>
+            <li>Capacidad de carga <b>500 – 1000 lbs</b></li>
+          </ul>
+          <a href="https://wa.me/18292725791?text=Hola%20PLADOM,%20me%20interesa%20la%20plataforma%20tipo%20tijera%2026'." class="btn btn-dark" target="_blank" rel="noopener">Cotizar 26'</a>
+        </div>
+      </article>
+      <!-- 32' -->
+      <article class="card">
+        <div class="card-img"><span class="tag">Plataforma tijera</span></div>
+        <div class="card-body">
+          <h3>Tijera 32'</h3>
+          <p class="model">Genie 3246 / Skyjack 4632</p>
+          <ul class="specs">
+            <li>Altura máx. <b>32'</b></li>
+            <li>Altura de trabajo <b>38'</b></li>
+            <li>Ancho <b>32" – 46"</b></li>
+            <li>Capacidad de carga <b>500 – 700 lbs</b></li>
+          </ul>
+          <a href="https://wa.me/18292725791?text=Hola%20PLADOM,%20me%20interesa%20la%20plataforma%20tipo%20tijera%2032'." class="btn btn-dark" target="_blank" rel="noopener">Cotizar 32'</a>
+        </div>
+      </article>
+      <!-- 40' -->
+      <article class="card">
+        <div class="card-img"><span class="tag">Plataforma tijera</span></div>
+        <div class="card-body">
+          <h3>Tijera 40'</h3>
+          <p class="model">Genie 4047 Scissor Lift</p>
+          <ul class="specs">
+            <li>Altura máx. <b>38.5'</b></li>
+            <li>Altura de trabajo <b>45'</b></li>
+            <li>Ancho <b>47"</b></li>
+            <li>Capacidad de carga <b>770 lbs</b></li>
+          </ul>
+          <a href="https://wa.me/18292725791?text=Hola%20PLADOM,%20me%20interesa%20la%20plataforma%20tipo%20tijera%2040'." class="btn btn-dark" target="_blank" rel="noopener">Cotizar 40'</a>
+        </div>
+      </article>
+      <!-- Contenedor -->
+      <article class="card">
+        <div class="card-img"><span class="tag">Almacenaje</span></div>
+        <div class="card-body">
+          <h3>Contenedor 40' HC</h3>
+          <p class="model">Almacén marítimo High Cube</p>
+          <ul class="specs">
+            <li>Alto interior <b>2.70 m</b></li>
+            <li>Ancho interior <b>2.35 m</b></li>
+            <li>Fondo interior <b>12 m</b></li>
+            <li>Capacidad de carga <b>28,600 kg</b></li>
+          </ul>
+          <a href="https://wa.me/18292725791?text=Hola%20PLADOM,%20me%20interesa%20el%20contenedor%20marítimo%2040'%20HC." class="btn btn-dark" target="_blank" rel="noopener">Cotizar contenedor</a>
+        </div>
+      </article>
+      <!-- Catálogo -->
+      <article class="card" style="background:var(--dark);color:#fff;justify-content:center;align-items:center;text-align:center;padding:34px">
+        <div class="card-body" style="align-items:center">
+          <h3 style="color:#fff">¿Necesitas el catálogo completo?</h3>
+          <p style="color:#C9CCCC;margin:10px 0 22px;font-size:.95rem">Descarga precios, medidas y disponibilidad de todos nuestros equipos.</p>
+          <a href="https://www.pladom.com.do/_files/ugd/2ff14d_a2932856e9a949b698ac32066ce57d0d.pdf" class="btn btn-primary" target="_blank" rel="noopener">Descargar catálogo (PDF)</a>
+        </div>
+      </article>
+    </div>
+    <p class="form-note center" style="margin-top:24px">* Especificaciones según catálogo PLADOM (julio 2025). Disponibilidad sujeta a inventario.</p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section id="testimonios">
+  <div class="wrap">
+    <div class="center" style="max-width:52ch">
+      <p class="eyebrow" style="color:var(--orange)">Lo que dicen nuestros clientes</p>
+      <h2>Proyectos que confían en PLADOM</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"El equipo llegó a tiempo y en excelentes condiciones. El proceso de renta fue rapidísimo, todo por WhatsApp. Repetiremos sin dudas."</p>
+        <div class="t-who"><span class="t-avatar">JM</span><div><b>José M.</b><span>Contratista, Santo Domingo</span></div></div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Rentamos dos tijeras de 32' para un proyecto de fachada. Máquinas modernas y bien mantenidas. Precio muy competitivo."</p>
+        <div class="t-who"><span class="t-avatar">CR</span><div><b>Carla R.</b><span>Gerente de obra, Santiago</span></div></div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Necesitábamos almacenaje en obra y el contenedor 40' resolvió perfecto. Servicio serio y buena comunicación."</p>
+        <div class="t-who"><span class="t-avatar">AP</span><div><b>Ariel P.</b><span>Ingeniero, La Romana</span></div></div>
+      </div>
+    </div>
+    <p class="form-note center" style="color:var(--gray-light);margin-top:24px">* Testimonios de ejemplo. Reemplázalos con reseñas reales de tus clientes (ideal: pídelas por WhatsApp tras cada renta).</p>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="center" style="max-width:52ch">
+      <p class="eyebrow">Contáctanos</p>
+      <h2>Solicita tu cotización</h2>
+      <p class="lead center">Cuéntanos qué equipo necesitas y para cuándo. Te respondemos en minutos por WhatsApp o correo.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Info -->
+      <div class="contact-info">
+        <div class="ci">
+          <div class="ic">📍</div>
+          <div>
+            <h4>Dirección</h4>
+            <a href="https://maps.app.goo.gl/v5P9yDPWHby2KLg56" target="_blank" rel="noopener">Cerros de Palmarejo, Pantoja, RD</a>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="ic">📞</div>
+          <div>
+            <h4>Enmanuel Delgado</h4>
+            <a href="https://wa.me/18292725791" target="_blank" rel="noopener">WhatsApp / Tel: (829) 272-5791</a><br>
+            <a href="mailto:edelgado@pladom.com.do?subject=Cotización%20PLADOM">edelgado@pladom.com.do</a>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="ic">📞</div>
+          <div>
+            <h4>Amaury Ángeles</h4>
+            <a href="https://wa.me/18295988494" target="_blank" rel="noopener">WhatsApp / Tel: (829) 598-8494</a><br>
+            <a href="mailto:aangeles@pladom.com.do?subject=Cotización%20PLADOM">aangeles@pladom.com.do</a>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="ic">🕐</div>
+          <div>
+            <h4>Horario</h4>
+            <p>Lunes a sábado · 8:00 a.m. – 6:00 p.m.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form id="quoteForm" onsubmit="return sendWhatsApp(event)">
+        <div>
+          <label for="nombre">Nombre*</label>
+          <input id="nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+        <div>
+          <label for="telefono">Teléfono / WhatsApp*</label>
+          <input id="telefono" name="telefono" required placeholder="(809) 000-0000">
+        </div>
+        <div>
+          <label for="equipo">Equipo de interés</label>
+          <select id="equipo" name="equipo">
+            <option>Plataforma tijera 19'</option>
+            <option>Plataforma tijera 26'</option>
+            <option>Plataforma tijera 32'</option>
+            <option>Plataforma tijera 40'</option>
+            <option>Contenedor marítimo 40' HC</option>
+            <option>Varios / no estoy seguro</option>
+          </select>
+        </div>
+        <div>
+          <label for="mensaje">Mensaje / fechas de renta</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Ej: Necesito una tijera de 32' del 10 al 20 de agosto en Santiago."></textarea>
+        </div>
+        <button type="submit" class="btn btn-wa" style="justify-content:center">Enviar por WhatsApp</button>
+        <p class="form-note">Al enviar se abre WhatsApp con tu mensaje listo. En Wix puedes conectar este formulario a Wix Forms para recibir los datos por correo.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="flogo" src="assets/pladom-logo-white.png" alt="PLADOM">
+        <p style="font-size:.92rem;max-width:34ch">Soluciones de altura, transporte y almacenaje a la altura de tus necesidades. Servicio nacional en República Dominicana.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/serviciospladom/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8.1a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm6.2-8.3a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@serviciospladom" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M16.6 5.8c-.9-.6-1.5-1.6-1.7-2.8h-2.8v11.4c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1V9.2c-.3 0-.5-.1-.8-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V8.9c1.1.8 2.4 1.3 3.9 1.3V7.4c-.7 0-1.4-.2-1.9-.6z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto directo</h4>
+        <ul>
+          <li><a href="https://wa.me/18292725791" target="_blank" rel="noopener">(829) 272-5791</a></li>
+          <li><a href="https://wa.me/18295988494" target="_blank" rel="noopener">(829) 598-8494</a></li>
+          <li><a href="mailto:aangeles@pladom.com.do">aangeles@pladom.com.do</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Servicios PLADOM SRL · RNC: [agregar RNC]</span>
+      <span>Soluciones de altura</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="fab" href="https://wa.me/18292725791?text=Hola%20PLADOM,%20quisiera%20una%20cotización." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.06 24l1.7-6.16A11.87 11.87 0 01.16 11.9C.16 5.33 5.5 0 12.06 0a11.8 11.8 0 018.4 3.49 11.8 11.8 0 013.48 8.42c0 6.57-5.35 11.9-11.92 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zM6.6 20.13c1.68.99 3.28 1.59 5.45 1.59 5.45 0 9.9-4.43 9.9-9.9a9.82 9.82 0 00-2.9-7A9.82 9.82 0 0012.06 2c-5.46 0-9.9 4.43-9.9 9.9 0 2.28.67 3.98 1.79 5.76l-.99 3.6 3.64-1.13zm10.9-5.55c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.69.25-1.28.17-1.41z"/></svg>
+</a>
+
+<script>
+  // Mobile menu
+  var burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+  burger.addEventListener('click',function(){navLinks.classList.toggle('open')});
+  navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open')})});
+
+  // Contact form -> WhatsApp
+  function sendWhatsApp(e){
+    e.preventDefault();
+    var n=document.getElementById('nombre').value,
+        t=document.getElementById('telefono').value,
+        eq=document.getElementById('equipo').value,
+        m=document.getElementById('mensaje').value;
+    var msg='Hola PLADOM, soy '+n+' (Tel: '+t+'). Me interesa: '+eq+'.'+(m?' '+m:'');
+    window.open('https://wa.me/18292725791?text='+encodeURIComponent(msg),'_blank');
+    return false;
+  }
+</script>
+</body>
+</html>
