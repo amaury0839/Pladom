@@ -1,0 +1,10 @@
+# Dependencias
+node_modules/
+
+# Artefactos de Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Sistema
+.DS_Store
+Thumbs.db
